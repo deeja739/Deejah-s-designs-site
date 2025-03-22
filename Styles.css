@@ -1,64 +1,109 @@
-/* General Styles */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* General Styling */
 body {
-    font-family: 'Lora', serif;
-    background-color: #F9F5F0;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF7F2; /* Soft warm background */
+    color: #3A2D27; /* Dark brown text */
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-/* Header Styles */
+/* Style for Service Page Headers */
 header {
-    background: #EAE0D5;
+    background-color: #F5EFE3; /* Light Beige */
     padding: 20px;
-}
-
-header h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #3A2D27;
     font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
 }
 
-/* Navigation Styles */
-nav ul {
+/* Style for Service Introduction Sections */
+.service-intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FFFFFF; /* White */
+}
+
+.service-intro h2 {
+    font-size: 32px;
+    color: #3A2D27;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.service-intro p {
+    font-size: 18px;
+    color: #5A4940;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Style for Service Packages */
+.service-packages {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #F5EFE3; /* Light Beige */
+}
+
+.service-packages h2 {
+    font-size: 28px;
+    color: #3A2D27;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.service-packages ul {
     list-style: none;
     padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.service-packages li {
+    font-size: 18px;
+    color: #5A4940;
+    padding: 12px;
+    font-weight: 400;
+    border-bottom: 1px solid #D6C8B6;
 }
 
-nav a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #8B5E3C;
+.service-packages li:last-child {
+    border-bottom: none;
 }
 
-/* Hero Section */
-.hero {
-    margin: 50px auto;
-    padding: 20px;
-}
-
+/* Style for Buttons */
 button {
-    background: #8B5E3C;
-    color: white;
-    padding: 10px 20px;
+    background-color: #7A4D35; /* Elegant Brown */
+    color: #FFFFFF;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
     border: none;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
     border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: #6A4028;
+    background-color: #5A3320; /* Darker Brown */
+    transform: scale(1.05);
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
-    margin-top: 50px;
-    background: #EAE0D5;
-    padding: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #EDE0D4;
+    font-size: 16px;
+    color: #3A2D27;
 }
