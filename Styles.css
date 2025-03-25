@@ -1,109 +1,69 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
-
-/* General Styling */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #FAF7F2; /* Soft warm background */
-    color: #3A2D27; /* Dark brown text */
-    margin: 0;
-    padding: 0;
-}
-
-/* Style for Service Page Headers */
-header {
-    background-color: #F5EFE3; /* Light Beige */
+    text-align: center;
     padding: 20px;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #3A2D27;
-    font-family: 'Playfair Display', serif;
+    background-color: #f5efe6; /* Light beige */
+    color: #5a3e2b; /* Deep brown */
 }
 
-/* Style for Service Introduction Sections */
-.service-intro {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #FFFFFF; /* White */
+/* Header */
+header {
+    background: linear-gradient(135deg, #b88e6a, #8b5e3c); /* Soft brown tones */
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.service-intro h2 {
-    font-size: 32px;
-    color: #3A2D27;
-    margin-bottom: 15px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-}
-
-.service-intro p {
-    font-size: 18px;
-    color: #5A4940;
-    font-weight: 400;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-/* Style for Service Packages */
-.service-packages {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #F5EFE3; /* Light Beige */
-}
-
-.service-packages h2 {
-    font-size: 28px;
-    color: #3A2D27;
-    font-family: 'Playfair Display', serif;
+h1 {
     font-weight: 600;
-    margin-bottom: 20px;
 }
 
-.service-packages ul {
+/* Navigation Bar */
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
-.service-packages li {
-    font-size: 18px;
-    color: #5A4940;
-    padding: 12px;
-    font-weight: 400;
-    border-bottom: 1px solid #D6C8B6;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.service-packages li:last-child {
-    border-bottom: none;
-}
-
-/* Style for Buttons */
-button {
-    background-color: #7A4D35; /* Elegant Brown */
-    color: #FFFFFF;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #8b5e3c; /* Brown */
+    padding: 8px 12px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #5A3320; /* Darker Brown */
-    transform: scale(1.05);
+nav ul li a:hover {
+    background: #8b5e3c;
+    color: white;
 }
 
-/* Footer Styling */
-footer {
-    text-align: center;
+/* Content Section */
+.content {
+    margin: 40px auto;
     padding: 20px;
-    background-color: #EDE0D4;
-    font-size: 16px;
-    color: #3A2D27;
+    max-width: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #5a3e2b; /* Deep brown */
+    color: white;
+    border-radius: 12px;
 }
