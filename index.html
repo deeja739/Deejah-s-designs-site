@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
         <h1>Welcome to Deejah's Designs~</h1>
         <p>Fashion, Digital Art & Branding Services</p>
         <nav>
-            <ul>
+            <ul> <!-- ✅ Correctly placed <ul> -->
                 <li><a href="fashion.html">Fashion Design</a></li>
                 <li><a href="digital.html">Digital Fashion</a></li>
                 <li><a href="branding.html">Branding Services</a></li>
@@ -31,18 +32,19 @@
         <button onclick="showMessage()">Explore Now</button>
     </section>
 
+    <!-- 🔹 Gallery Section -->
+    <button id="explore-btn">Explore Gallery</button>
+
+    <div id="gallery" class="hidden">
+        <img src="images/photo1.jpg" alt="Photo 1">
+        <img src="images/photo2.jpg" alt="Photo 2">
+        <img src="images/photo3.jpg" alt="Photo 3">
+    </div>
+
     <footer>
         <p>&copy; 2025 Deejah's Designs~ | All rights reserved.</p>
     </footer>
-<button id="explore-btn">Explore Gallery</button>
 
-<div id="gallery" class="hidden">
-    <img src="images/photo1.jpg" alt="Photo 1">
-    <img src="images/photo2.jpg" alt="Photo 2">
-    <img src="images/photo3.jpg" alt="Photo 3">
-</div>
-
-<script src="script.js"></script> 
-
+    <script src="script.js"></script> 
 </body>
 </html>
