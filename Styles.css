@@ -85,7 +85,10 @@ footer {
 
 /* Hide Gallery Initially */
 .hidden {
-    display: none;
+    display: none !important; 
+}
+
+    
 }
 
 /* Gallery Styling */
