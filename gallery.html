@@ -15,27 +15,46 @@
     <section class="gallery" id="gallery"></section>
 
 <script>
-    const totalImages = 39;  
+    const totalImages = 39;  // Total number of images
+    const albumSizes = [7, 8, 6, 4];  // Array specifying the number of images in each album
+
     const gallery = document.getElementById("gallery");
+    let albumNum = 1;  // Start with the first album
+    let imgCount = 0;  // Counter to track how many images are added to the current album
 
     for (let i = 1; i <= totalImages; i++) {
-        let albumNum = Math.ceil(i / 10); // Groups every 10 images into an album
-        let imgPath = `images/album${albumNum}_design${i}.png`; // Adjust if using .jpg
+        // Construct the image path based on album and design number
+        let imgPath = `images/album${albumNum}_design${i}.png`;  // Adjust the extension if needed
         
+        // Create the image container
         let imgDiv = document.createElement("div");
         imgDiv.classList.add("gallery-item");
 
+        // Create the image element
         let img = document.createElement("img");
         img.src = imgPath;
         img.alt = `Design ${i}`;
 
+        // Create the overlay text
         let overlay = document.createElement("div");
         overlay.classList.add("overlay");
         overlay.innerText = `Luxury Design ${i}`;
 
+        // Append the image and overlay to the container
         imgDiv.appendChild(img);
         imgDiv.appendChild(overlay);
+
+        // Add the container to the gallery section
         gallery.appendChild(imgDiv);
+
+        // Increment the image counter
+        imgCount++;
+
+        // Check if the current album is full
+        if (imgCount === albumSizes[albumNum - 1]) {
+            albumNum++;  // Move to the next album
+            imgCount = 0;  // Reset the image counter for the new album
+        }
     }
 </script>
 
