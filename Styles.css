@@ -105,3 +105,78 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+/* ---- Explore Button & Gallery Styles ---- */
+/* Explore Button Styling */
+.explore-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+    background: gold;
+    color: black;
+}
+
+/* Gallery Grid Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Luxury Image Effects */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.back-btn:hover {
+    color: gold;
+}
