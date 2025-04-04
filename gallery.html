@@ -11,21 +11,32 @@
         <h1>Our Luxury Collection</h1>
         <a href="index.html" class="back-btn">⬅ Back to Home</a>
     </header>
+    <section class="gallery" id="gallery"></section>
+
+<script>
+    // Number of images you have
+    const totalImages = 39;  
+    const gallery = document.getElementById("gallery");
+
+    for (let i = 1; i <= totalImages; i++) {
+        let imgDiv = document.createElement("div");
+        imgDiv.classList.add("gallery-item");
+
+        let img = document.createElement("img");
+        img.src = `images/design${i}.png`;  // Adjust file extension if needed
+        img.alt = `Design ${i}`;
+
+        let overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        overlay.innerText = `Luxury Design ${i}`;
+
+        imgDiv.appendChild(img);
+        imgDiv.appendChild(overlay);
+        gallery.appendChild(imgDiv);
+    }
+</script>
+
     
-    <section class="gallery">
-        <div class="gallery-item">
-            <img src="images/image1.png" alt="Elegant Fashion">
-            <div class="overlay">Elegant Fashion</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/image2.png" alt="Modern Layers">
-            <div class="overlay">Modern Layers</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/image3.png" alt="Luxury Branding">
-            <div class="overlay">Luxury Branding</div>
-        </div>
-    </section>
 
     <footer>
         <p>&copy; 2025 Deejah's Designs~ | All rights reserved.</p>
