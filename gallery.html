@@ -11,19 +11,22 @@
         <h1>Our Luxury Collection</h1>
         <a href="index.html" class="back-btn">⬅ Back to Home</a>
     </header>
+
     <section class="gallery" id="gallery"></section>
 
 <script>
-    // Number of images you have
     const totalImages = 39;  
     const gallery = document.getElementById("gallery");
 
     for (let i = 1; i <= totalImages; i++) {
+        let albumNum = Math.ceil(i / 10); // Groups every 10 images into an album
+        let imgPath = `images/album${albumNum}_design${i}.png`; // Adjust if using .jpg
+        
         let imgDiv = document.createElement("div");
         imgDiv.classList.add("gallery-item");
 
         let img = document.createElement("img");
-        img.src = `images/design${i}.png`;  // Adjust file extension if needed
+        img.src = imgPath;
         img.alt = `Design ${i}`;
 
         let overlay = document.createElement("div");
@@ -36,10 +39,8 @@
     }
 </script>
 
-    
-
-    <footer>
-        <p>&copy; 2025 Deejah's Designs~ | All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Deejah's Designs~ | All rights reserved.</p>
+</footer>
 </body>
 </html>
