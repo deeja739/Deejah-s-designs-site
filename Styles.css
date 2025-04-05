@@ -100,37 +100,44 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
-
 .gallery-item img {
     width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
-
 /* Hover Effects */
 .gallery-item:hover img {
     transform: scale(1.1);
     filter: brightness(70%);
 }
-
 .overlay {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Elegant dark overlay */
+    color: #fff;
     font-size: 18px;
-    padding: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
 }
-
 .gallery-item:hover .overlay {
     opacity: 1;
 }
-
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: none; /* Remove dimming to allow overlay to do the job */
+}
 /* Back Button */
 .back-btn {
     display: inline-block;
@@ -139,7 +146,6 @@ footer {
     color: black;
     font-size: 18px;
 }
-
 .back-btn:hover {
     color: gold;
 }
