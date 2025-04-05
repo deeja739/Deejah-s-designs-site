@@ -5,8 +5,8 @@ body {
     padding: 20px;
     background-color: #f5efe6; /* Light beige */
     color: #5a3e2b; /* Deep brown */
+    line-height: 1.6;
 }
-
 /* Header */
 header {
     background: linear-gradient(135deg, #b88e6a, #8b5e3c); /* Soft brown tones */
@@ -15,11 +15,13 @@ header {
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 h1 {
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
 }
-
 /* Navigation Bar */
 nav {
     margin-top: 20px;
@@ -148,4 +150,9 @@ footer {
 }
 .back-btn:hover {
     color: gold;
+}
+h1, h2, h3, .overlay {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
