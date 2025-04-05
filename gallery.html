@@ -13,54 +13,35 @@
     </header>
 
     <section class="gallery" id="gallery"></section>
+<script>
+    const albumSizes = [7, 7, 6, 7, 8, 4];
+    const gallery = document.getElementById("gallery");
 
-    <script>
-        const totalImages = 39;  // Total number of images
-        const albumSizes = [7, 8, 6, 4];  // Array specifying the number of images in each album
+    let imgIndex = 1;
 
-        const gallery = document.getElementById("gallery");
-        let albumNum = 1;  // Start with the first album
-        let imgCount = 0;  // Counter to track how many images are added to the current album
-        let currentImage = 1; // Track the current image number
+    for (let album = 1; album <= albumSizes.length; album++) {
+        for (let design = 1; design <= albumSizes[album - 1]; design++) {
+            let imgPath = `images/album${album}_design${design}.png`;
 
-        for (let i = 1; i <= totalImages; i++) {
-            // Construct the image path based on album and design number
-            let imgPath = `images/album${albumNum}_design${currentImage}.png`;  // Adjust the extension if needed
-            console.log(imgPath);  // Log the path for debugging
-
-            // Create the image container
             let imgDiv = document.createElement("div");
             imgDiv.classList.add("gallery-item");
 
-            // Create the image element
             let img = document.createElement("img");
             img.src = imgPath;
-            img.alt = `Design ${currentImage}`;
+            img.alt = `Design ${imgIndex}`;
 
-            // Create the overlay text
             let overlay = document.createElement("div");
             overlay.classList.add("overlay");
-            overlay.innerText = `Luxury Design ${currentImage}`;
+            overlay.innerText = `Luxury Design ${imgIndex}`;
 
-            // Append the image and overlay to the container
             imgDiv.appendChild(img);
             imgDiv.appendChild(overlay);
-
-            // Add the container to the gallery section
             gallery.appendChild(imgDiv);
 
-            // Increment the image counter for the current album
-            imgCount++;
-            currentImage++;
-
-            // Check if the current album is full
-            if (imgCount === albumSizes[albumNum - 1]) {
-                albumNum++;  // Move to the next album
-                imgCount = 0;  // Reset the image counter for the new album
-            }
+            imgIndex++;
         }
-    </script>
-
+    }
+</script>
     <footer>
         <p>&copy; 2025 Deejah's Designs~ | All rights reserved.</p>
     </footer>
